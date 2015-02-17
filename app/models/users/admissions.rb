@@ -1,0 +1,3 @@
+class Admissions < User
+
+end

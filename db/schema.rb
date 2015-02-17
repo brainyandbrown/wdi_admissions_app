@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150217205038) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
+    t.string   "type"
     t.string   "f_name",          null: false
     t.string   "l_name",          null: false
     t.string   "sex",             null: false
@@ -24,7 +25,6 @@ ActiveRecord::Schema.define(version: 20150217205038) do
     t.string   "email",           null: false
     t.string   "phone",           null: false
     t.string   "password_digest", null: false
-    t.string   "user_type",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
