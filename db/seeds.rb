@@ -6,7 +6,6 @@ User.create([
   { f_name: "Dennis",   l_name: "Liaw",     sex: "male",   born_on: "May 16 1987", email: "dennisliaw@gmail.com", phone: "678-455-9920", password: "password", user_type: "instructor" }
 ])
 
-
 # t.string :f_name, null: false
 # t.string :l_name, null: false
 # t.string :sex, null: false
