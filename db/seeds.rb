@@ -5,10 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Student.create([
+  { f_name: "Angelina", l_name: "Bethoney", sex: "female", born_on: "04/13/1989", email: "ambethoney@yahoo.com", phone: "774-291-0958", password_digest: },
+  { f_name: "Dana", l_name: "DeFilipo", sex: "female", born_on: "04/14/1991", email: "dana.dflip@gmail.com", phone: "516-987-8427", password_digest: },
+  { f_name: "Sade", l_name: "Stevens", sex: "female", born_on: "11/10/1991", email: "sadeshakur@gmail.com", phone: "516-043-7720", password_digest: },
+   { f_name: "Dennis", l_name: "Liaw", sex: "male", born_on: "05/16/1987", email: "dennisliaw@gmail.com", phone: "678-455-9920", password_digest: }
+])
 
-INSERT INTO students(:f_name, :l_name, :sex, :born_on, :email, :phone, :password_digest) VALUES{
-  ["Angelina", "Bethoney", "female", "04/13/1989", "ambethoney@yahoo.com", "774-291-0958", "password1"],
-  ["Dana", "DeFilipo", "female", "04/14/1991", "dana.dflip@gmail.com", "516-987-8427", "dflip"],
-  ["Sade", "Stevens", "female", "11/10/1991", "sadeshakur@gmail.com", "516-043-7720", "cheese"],
-  ["Dennis", "Liaw", "male", "05/16/1987", "dennisliaw@gmail.com", "678-455-9920", "dennis"]
-}
+
+
+
