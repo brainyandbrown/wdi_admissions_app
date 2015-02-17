@@ -21,7 +21,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+<<<<<<< HEAD
 # Use ActiveModel has_secure_password
+=======
+#Use ActiveModel has_secure_password
+>>>>>>> f9a9b97596f93c8766ecedc1b34d498adb33adb1
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
