@@ -1,16 +1,21 @@
 class SessionsController < ApplicationController
 
+def new
+
+end
+
 def create
+  email    = params[:email]
+  password = params[:password]
+  user     = User.find_by email: email
 
-email    = params[:email]
-password = params[:password]
-student = Student.find_by(email: email)
+  if user && user.authenticate(password)
+    session[:user_id] = user.id
+    redirect_to '/home'
+  else
+    redirect_to '/login'
+  end
 
-if student && student.authenticate(pass)
-  session[:student_id] = student.student_id
-  redirect_to '/home'
-else
-  redirect_to '/login'
 end
 
 end
