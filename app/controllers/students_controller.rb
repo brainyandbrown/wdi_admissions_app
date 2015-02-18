@@ -17,25 +17,23 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.(student_params)
+    @student = Student.create(student_params)
     redirect_to @student
   end
 
-  private
-
-
-
-# paperclip methods
-def create
-  @student = Student.create( student_params )
-end
-
-
-# Use strong_parameters for attribute whitelisting
-# Be sure to update your create() and update() controller methods.
 
 
   def student_params
     params.require(:student).permit(:name, :portfolio)
   end
+
+  def destroy
+    Student.destroy(params[:id])
+    @student.portfolio = nil
+    @student.save
+    redirect_to @student
+  end
+
+private
+
 end
