@@ -1,0 +1,5 @@
+<h1> Edit </h1>
+<!-- paperclip - this should be used in both new and view -->
+<%= form_for @student, :url => students_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :portfolio %>
+<% end %>

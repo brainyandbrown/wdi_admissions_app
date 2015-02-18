@@ -38,4 +38,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # paperclip:
+  # need to enter this into your command line: "brew install imagemagick"
+  # also since we might deal with PDF: "brew install gs"
+Paperclip.options[:command_path] = "/usr/local/bin/"
+
+
 end

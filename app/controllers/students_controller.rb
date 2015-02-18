@@ -23,7 +23,19 @@ class StudentsController < ApplicationController
 
   private
 
+
+
+# paperclip methods
+def create
+  @student = Student.create( student_params )
+end
+
+
+# Use strong_parameters for attribute whitelisting
+# Be sure to update your create() and update() controller methods.
+
+
   def student_params
-    params.require(:student).permit(:name)
+    params.require(:student).permit(:name, :portfolio)
   end
 end
