@@ -17,14 +17,15 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.create(student_params)
-    redirect_to @student
+    student = Student.create student_params
+    # binding.pry
+    redirect_to student_path(student)
   end
 
 
 
   def student_params
-    params.require(:student).permit(:name, :portfolio)
+    params.require(:student).permit(:email, :password)
   end
 
   def destroy
@@ -34,6 +35,5 @@ class StudentsController < ApplicationController
     redirect_to @student
   end
 
-private
 
 end

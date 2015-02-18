@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   get    '/home'   => 'user#show'
 
-  #get "/home" => 'students#home'
+  get '/home' => "users#show"
+
 
   resources :students
   resources :instructors
   resources :admissions
-
 
 end
