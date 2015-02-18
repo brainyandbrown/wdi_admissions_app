@@ -18,13 +18,14 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.create(student_params)
-    redirect_to @student
+
+    redirect_to student_path(student)
   end
 
 
 
   def student_params
-    params.require(:student).permit(:name, :portfolio)
+    params.require(:student).permit(:email, :password, :id)
   end
 
   def destroy
