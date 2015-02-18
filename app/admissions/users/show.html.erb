@@ -1,0 +1,6 @@
+<p>Logged in as the <%= current_user.email %></p>
+
+
+<p>User Type: <%= current_user.user_type %></p>
+
+<%= link_to "Logout", "/logout", method: :delete %>
