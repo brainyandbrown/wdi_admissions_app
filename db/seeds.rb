@@ -19,8 +19,8 @@ Admissions.create(
   )
 
 Prospects.create([
-{ student_id: Student.find_by(email: "ambethoney@yahoo.com")},
-{ student_id: Student.find_by(email: "sadeshakur@gmail.com")}
+{ students_id: Student.find_by(email: "ambethoney@yahoo.com").id },
+{ students_id: Student.find_by(email: "sadeshakur@gmail.com").id }
 ])
 
 # t.string :f_name, null: false
