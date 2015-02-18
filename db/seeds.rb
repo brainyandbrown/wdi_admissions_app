@@ -12,6 +12,11 @@ Admissions.create(
   { f_name: "Dana",     l_name: "DeFilipo", sex: "female", born_on: "April 14 1991", email: "dana.dflip@gmail.com", phone: "516-987-8427", password: "password"}
   )
 
+Prospects.create([
+{ student_id: Student.find_by(email: "ambethoney@yahoo.com")},
+{ student_id: Student.find_by(email: "sadeshakur@gmail.com")}
+])
+
 # t.string :f_name, null: false
 # t.string :l_name, null: false
 # t.string :sex, null: false
