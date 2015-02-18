@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217205038) do
+ActiveRecord::Schema.define(version: 20150218154255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "prospects", force: :cascade do |t|
+    t.integer "students_id"
+    t.boolean "phone_screen",         default: false
+    t.boolean "instructor_interview", default: false
+    t.boolean "offered",              default: false
+    t.boolean "accepted",             default: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "type"
