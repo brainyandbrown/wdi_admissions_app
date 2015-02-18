@@ -21,9 +21,19 @@ class StudentsController < ApplicationController
     redirect_to @student
   end
 
-  private
+
 
   def student_params
-    params.require(:student).permit(:name)
+    params.require(:student).permit(:name, :portfolio)
   end
+
+  def destroy
+    Student.destroy(params[:id])
+    @student.portfolio = nil
+    @student.save
+    redirect_to @student
+  end
+
+private
+
 end

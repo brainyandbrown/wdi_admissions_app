@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   #this will change depending on user type
   get '/home' => "users#show"
+
   resources :students
   resources :instructors
   resources :admissions
+
 end
