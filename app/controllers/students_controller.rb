@@ -18,7 +18,7 @@ class StudentsController < ApplicationController
 
   def create
     student = Student.create(student_params)
-# binding.pry
+binding.pry
     redirect_to student_path(student)
   end
 
