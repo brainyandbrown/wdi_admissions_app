@@ -1,0 +1,29 @@
+<h1>Phone Interview Write-up</h1>
+
+<%= form_for (@student) do |f| %>
+
+  <%= f.label :instructor_name, "Instructor Name" %>
+    <%= f.text_field :instructor_name %><br/>
+  <%= f.label :student_name, "Student Name" %>
+    <%= f.text_field :student_name %><br/>
+  <%= f.label :date, "Date" %>
+    <%= f.text_field :date %><br/>
+  <%= f.label :course_name, "Course" %>
+    <%= f.text_field :course_name %><br/>
+
+  <%= f.label :question_1, "Where are you currently doing? What is your background?" %>
+    <%= f.text_field :question_1 %><br/>
+  <%= f.label :question_2, "What sparked your interest in Web Development?" %>
+    <%= f.text_field :question_2 %><br/>
+  <%= f.label :question_3, "What distinguishes you from everyone else in the world?" %>
+    <%= f.text_field :question_3 %><br/>
+  <%= f.label :question_4, "What are you most interested in learning?" %>
+    <%= f.text_field :question_4 %><br/>
+  <%= f.label :question_5, "What do you plan to do once you graduate from GA?" %>
+    <%= f.text_field :question_5 %><br/>
+  <%= f.label :question_6, "What do you do in your free time?" %>
+    <%= f.text_field :question_6 %><br/>
+  <%= f.label :question_7, "Is there anything else you would like us to know?" %>
+    <%= f.text_field :question_7 %><br/>
+  <%= f.submit "Save Interview" :name :save_ %>
+<% end %>
