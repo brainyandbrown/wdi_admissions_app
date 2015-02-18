@@ -10,13 +10,14 @@ class InstructorsController < ApplicationController
 
   def show
     @instructor = Instructor.find(params[:id])
+  end
 
   def new_instructor
     @instructor = Instructor.new
   end
 
   def create_instructor
-    @instructor = Instructor(instructor_params)
+    @instructor = Instructor.create(instructor_params)
     redirect_to @instructor
   end
 
