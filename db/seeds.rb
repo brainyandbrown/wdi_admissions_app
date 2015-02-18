@@ -1,4 +1,10 @@
 #("f_name", "l_name", "sex", "email", "phone", "password_digest", "created_at", "updated_at")
+
+Student.destroy_all
+Instructor.destroy_all
+Admissions.destroy_all
+Prospects.destroy_all
+
 Student.create([
   { f_name: "Angelina", l_name: "Bethoney", sex: "female", born_on: "April 13 1989", email: "ambethoney@yahoo.com", phone: "774-291-0958", password: "password" },
   { f_name: "Sade",     l_name: "Stevens",  sex: "female", born_on: "November 10 1991", email: "sadeshakur@gmail.com", phone: "516-043-7720", password: "password" }
