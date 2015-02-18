@@ -1,0 +1,11 @@
+Logged in as <%= current_user.email %>
+
+<%= link_to "Logout", "/logout", method: :delete %>
+
+<h1>Phone Interview Write-up</h1>
+<%= form_tag '/phone_interview' do %>
+<!-- render the email and password-->
+  <%= text_field_tag :email %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Login" %>
+<% end %>

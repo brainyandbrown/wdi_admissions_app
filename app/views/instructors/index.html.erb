@@ -1,0 +1,10 @@
+Logged in as <%= current_user.email %>
+
+<%= link_to "Logout", "/logout", method: :delete %>
+
+<h1>Welcome to the Instructors Portal</h1>
+
+<%= link to("View Student List", students_path) %>
+<!-- need to connect this to specific group of students who have had the phone interview -->
+<%= link to("Conduct an Interview", new_students_path) %>
+

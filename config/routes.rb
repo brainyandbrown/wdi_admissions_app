@@ -9,7 +9,4 @@ Rails.application.routes.draw do
 
   #get "/home" => 'students#home'
 
-  #this will change depending on user type
-  get '/home' => "users#show"
-
 end
