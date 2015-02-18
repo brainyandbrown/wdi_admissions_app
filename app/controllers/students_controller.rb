@@ -34,6 +34,5 @@ class StudentsController < ApplicationController
     redirect_to @student
   end
 
-private
 
 end
