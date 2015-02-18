@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
   get    '/home'   => 'user#show'
 
-  #get "/home" => 'students#home'
-
-  #this will change depending on user type
   get '/home' => "users#show"
 
   resources :students

@@ -17,15 +17,15 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.create(student_params)
-
+    student = Student.create(student_params)
+# binding.pry
     redirect_to student_path(student)
   end
 
 
 
   def student_params
-    params.require(:student).permit(:email, :password, :id)
+    params.require(:student).permit(:email, :password)
   end
 
   def destroy
