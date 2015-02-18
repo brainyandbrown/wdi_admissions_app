@@ -12,6 +12,15 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  def new
+    @student = Student.new
+  end
+
+  def create
+    @student = Student.(student_params)
+    redirect_to @student
+  end
+
   private
 
   def student_params
