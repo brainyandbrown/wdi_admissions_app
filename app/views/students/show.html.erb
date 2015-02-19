@@ -4,7 +4,7 @@ Logged in as <%= @student.email %>
 
 
 
-<%= form_for @post, :url => students_path(@student), :html => { :multipart => true } do |form| %>
+<%= form_for @student, :url => student_path(@student), :html => { :multipart => true } do |form| %>
   <%= form.file_field :portfolio %>
 <%= form.submit %>
 <% end %>
