@@ -8,6 +8,9 @@
 </head>
 <body>
 
+Logged in as <%= current_user.f_name current_user.l_name %>
+<%= link_to "Logout", "/logout", method: :delete %>
+
 <%= yield %>
 
 </body>

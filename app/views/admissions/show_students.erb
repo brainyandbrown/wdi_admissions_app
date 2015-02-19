@@ -8,6 +8,6 @@
      <p>Phone: <%= student.phone %></p>
      <%= link_to("View This Student", student_path(student)) %>
     </div>
-    <%= link_to("Return Home", student_path(student)) %>
   <% end %>
+  <%= link_to "Return Home", "/home", method: :read %>
 </div>
