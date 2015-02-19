@@ -1,3 +1,0 @@
-class Admission < User
-
-end

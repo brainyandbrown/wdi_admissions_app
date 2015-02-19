@@ -1,8 +1,8 @@
 #("f_name", "l_name", "sex", "email", "phone", "password_digest", "created_at", "updated_at")
 
 Student.destroy_all
+Producers.destroy_all
 Instructor.destroy_all
-Admissions.destroy_all
 Prospects.destroy_all
 
 Student.create([
@@ -14,7 +14,7 @@ Instructor.create(
   { f_name: "Dennis",   l_name: "Liaw",     sex: "male",   born_on: "May 16 1987", email: "dennisliaw@gmail.com", phone: "678-455-9920", password: "password"}
   )
 
-Admissions.create(
+Producer.create(
   { f_name: "Dana",     l_name: "DeFilipo", sex: "female", born_on: "April 14 1991", email: "dana.dflip@gmail.com", phone: "516-987-8427", password: "password"}
   )
 
