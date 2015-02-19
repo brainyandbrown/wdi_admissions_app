@@ -1,12 +1,5 @@
 class StudentsController < ApplicationController
 
-  def views
-    @student = Student
-  end
-
-  def index
-    @student = Student.all
-  end
 
   def show
     @student = Student.find(params[:id])
@@ -17,21 +10,24 @@ class StudentsController < ApplicationController
   end
 
   def create
-    student = Student.create student_params
-    # binding.pry
+    student = Student.create(student_params)
+    #sends notification
+    StudentMailer.welcome_email(student).deliver_now
+
     redirect_to student_path(student)
   end
-
-
 
   def student_params
     params.require(:student).permit(:email, :password)
   end
 
+  def update
+    student = Student.find(params[:id])
+    redirect_to student_path(student)
+  end
+
   def destroy
     Student.destroy(params[:id])
-    @student.portfolio = nil
-    @student.save
     redirect_to @student
   end
 

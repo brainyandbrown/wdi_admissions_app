@@ -11,12 +11,18 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(password)
       session[:user_id] = user.id
-      #reroute to appropriate controller bas one user.user_type
+      #TODO: reroute to appropriate controller bas one user.user_type
       redirect_to '/home'
     else
+      flash[:error] = true
       redirect_to '/login'
     end
 
+  end
+
+  def destroy
+    session.destroy
+    redirect_to '/login'
   end
 
 end

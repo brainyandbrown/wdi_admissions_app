@@ -5,3 +5,7 @@
   <%= password_field_tag :password %>
   <%= submit_tag "Login" %>
 <% end %>
+
+<% if flash[:error] %>
+<p> Your email and password did not match. </p>
+<% end %>
