@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
   def create
     student = Student.create(student_params)
     #sends notification
-    StudentMailer.welcome_email(student).deliver
+    StudentMailer.welcome_email(student).deliver_now
     redirect_to student_path(student)
   end
 
