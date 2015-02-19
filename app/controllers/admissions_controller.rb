@@ -1,27 +1,23 @@
 class AdmissionsController < ApplicationController
 
-  def views
-    @admission = Admissions
-  end
-
   def index
-    @admission = Admissions.all
+    @admissions = Admission.all
   end
 
   def new
-    @admission = Admissions.new
+    @admission = Admission.new
   end
 
   def create
-    @admission = Admissions.(admission_params)
-    redirect_to @admission
+    admission = Admission.new(admission_params)
+    admission.save
+    redirect_to admission
   end
-
 
   private
 
   def admission_params
-    params.require(:admissions).permit(:name)
+    params.require(:admission).permit(:name)
   end
 end
 
