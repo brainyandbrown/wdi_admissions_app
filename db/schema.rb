@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218154255) do
+ActiveRecord::Schema.define(version: 20150219144651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "body"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "prospects", force: :cascade do |t|
     t.integer "students_id",                          null: false
@@ -26,12 +37,12 @@ ActiveRecord::Schema.define(version: 20150218154255) do
 
   create_table "users", force: :cascade do |t|
     t.string   "type"
-    t.string   "f_name"
-    t.string   "l_name"
-    t.string   "sex"
-    t.date     "born_on"
-    t.string   "phone"
+    t.string   "f_name",          null: false
+    t.string   "l_name",          null: false
+    t.string   "sex",             null: false
+    t.date     "born_on",         null: false
     t.string   "email",           null: false
+    t.string   "phone",           null: false
     t.string   "password_digest", null: false
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,1 +1,14 @@
 Logged in as <%= @student.email %>
+
+<!-- Testing Paperclip -->
+
+
+
+<%= form_for @post, :url => students_path(@student), :html => { :multipart => true } do |form| %>
+  <%= form.file_field :portfolio %>
+<%= form.submit %>
+<% end %>
+
+
+
+
