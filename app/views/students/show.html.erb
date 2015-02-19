@@ -9,7 +9,11 @@ Logged in as <%= @student.email %>
 <%= form.submit %>
 <% end %>
 
+<% if flash[:success] %>
+  <p>User updated!</p>
+<% end %>
 
+<%= image_tag @student.portfolio.url(:medium) %>
 
 <%= link_to "Logout", "/logout", method: :delete %>
 

@@ -16,35 +16,28 @@ ActiveRecord::Schema.define(version: 20150219144651) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "body"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-  end
-
   create_table "prospects", force: :cascade do |t|
-    t.integer "students_id",                          null: false
-    t.boolean "phone_screen",         default: false
-    t.boolean "instructor_interview", default: false
-    t.boolean "offered",              default: false
-    t.boolean "accepted",             default: false
+    t.integer "students_id",    null: false
+    t.integer "admissions_id"
+    t.integer "instructors_id"
+    t.integer "status",         null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "type"
-    t.string   "f_name",          null: false
-    t.string   "l_name",          null: false
-    t.string   "sex",             null: false
-    t.date     "born_on",         null: false
-    t.string   "email",           null: false
-    t.string   "phone",           null: false
-    t.string   "password_digest", null: false
+    t.string   "f_name"
+    t.string   "l_name"
+    t.string   "sex"
+    t.date     "born_on"
+    t.string   "phone"
+    t.string   "email",                  null: false
+    t.string   "password_digest",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "portfolio_file_name"
+    t.string   "portfolio_content_type"
+    t.integer  "portfolio_file_size"
+    t.datetime "portfolio_updated_at"
   end
+
 end

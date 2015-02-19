@@ -17,12 +17,12 @@ class StudentsController < ApplicationController
     redirect_to student_path(student)
   end
 
-  def student_params
-    params.require(:student).permit(:email, :password)
-  end
-
   def update
     student = Student.find(params[:id])
+    student.update(student_params)
+    student.save
+
+    flash[:success] = true
     redirect_to student_path(student)
   end
 
@@ -31,5 +31,10 @@ class StudentsController < ApplicationController
     redirect_to @student
   end
 
+  private
+
+  def student_params
+    params.require(:student).permit(:email, :password, :portfolio)
+  end
 
 end
